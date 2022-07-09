@@ -54,9 +54,15 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'faker', '~> 2.21'
+  gem 'rspec', '~> 3.11'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  gem 'rubocop-rails', '~> 2.15', '>= 2.15.2'
+  gem 'rubocop-rspec', '~> 2.12', '>= 2.12.1'
 end
 
 group :development do
+  gem 'rubocop', '~> 1.31', '>= 1.31.2'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -65,5 +71,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :test do
+  gem 'simplecov', '~> 0.21.2', require: false
 end
 
