@@ -1,0 +1,10 @@
+= form_with(model: @parent) do |form|
+  - if @parent.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@parent.errors.count, "error")} prohibited this parent from being saved:"
+      ul
+        - @parent.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.submit

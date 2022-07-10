@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Parents
+
+#parents
+  - @parents.each do |parent|
+    == render parent
+    p
+      = link_to "Show this parent", parent
+
+= link_to "New parent", new_parent_path
