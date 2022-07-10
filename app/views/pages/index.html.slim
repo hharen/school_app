@@ -1,0 +1,13 @@
+h1 Welcome
+- if logged_in?
+  p 
+    | You are logged in as 
+    = current_user.name
+    | . 
+    = button_to 'log out', log_out_path, method: :delete
+- else
+  p You are not logged in.
+  p
+    | You can 
+    = link_to 'log in', log_in_path
+    | . 

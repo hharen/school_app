@@ -1,0 +1,8 @@
+h1 Log in
+- # TODO: Show error messages
+= form_for :user_session, url: user_sessions_path do |f|
+  = f.label :email, "Email"
+  = f.text_field :email
+  = f.label :Password, "Password"
+  = f.password_field :password
+  = f.submit "Log in", :disable_with => 'Logging in...'
