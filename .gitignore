@@ -30,5 +30,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# This commes from SimpleCov gem
+/coverage
+
 /app/assets/builds/*
 !/app/assets/builds/.keep
