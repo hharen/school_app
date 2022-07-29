@@ -1,2 +1,2 @@
-class Parent < ApplicationRecord
+class Parent < User
 end
